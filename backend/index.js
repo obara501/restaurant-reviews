@@ -23,7 +23,7 @@ MongoClient.connect(
 .then(async client =>{
     await RestaurantsDAO.injectDB(client)
     app.listen(port,() =>{
-        console.log('litsening on port '+port)
+        console.log('listening on port '+port)
     })
 })
 

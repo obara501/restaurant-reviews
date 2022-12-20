@@ -1,5 +1,6 @@
-//Create Sever
+/*---------------------CREATE SREVER INSTANCE------------------------*/
 
+//Import statements.
 import express from "express"
 import cors from "cors"
 import restaurants from "./api/restaurants.route.js"
@@ -9,6 +10,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+//Root URL
 app.use("/api/v1/restaurants", restaurants)
 app.use("*", (req, res) => res.status(404).json({error:"not found"}))
 
